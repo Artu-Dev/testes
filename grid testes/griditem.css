@@ -1,0 +1,37 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    background: black;
+    height: 100vh;
+    width:  100vw;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    grid-gap: 5px;
+/*
+    align-content: center;
+    justify-content: center;
+
+justify-items: end;
+align-items: end;
+*/
+}
+
+.container > div {
+    background: #436746;
+    width: 50%;
+    height: 50%;
+}
+
+.center {
+    justify-self: center;
+    align-self: center;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>OpServices</title>
+</head>
+<body>
+    <section>
+        <header>
+            <img src="img/Logotipo_OpServices_monocromatico_branco_modelo2.png" alt="">
+            <div class="divisor"></div>
+            <h1>logística</h1>
+        </header>
+        
+        <div class="side-status">
+            <i class="fa-sharp fa-solid fa-truck-front"></i>
+            <h1>status de entrega</h1>
+            <select name="status-day" id="statusday">
+                <option value="">Ontem</option>
+                <option value="" selected>Hoje</option>
+                <option value="">Amanhã</option>
+            </select>
+            <div class="side-status-data">
+                <div class="status-item">
+                    <p>Dentro do prazo</p>
+                    <span id="dentro-prazo">92</span>
+                </div>
+                <div class="status-item">
+                    <p>Fora do prazo</p>
+                    <span id="dentro-prazo">03</span>
+                </div>
+                <div class="status-item">
+                    <p>Não entregues</p>
+                    <span id="dentro-prazo">00</span>
+                </div>
+                
+            </div>
+        </div>
+        <div class="side-graph">
+            <h1>96%</h1>
+            <div class="divisor-graph"></div>
+            <p>Dentro do prazo</p>
+            <canvas id="pieChart"></canvas>
+        </div>
+    </section>
+
+    <main>
+        <div class="main-top">
+            <div class="mainChart">
+                <div class="main-top-time">
+                    <i class="fa-regular fa-clock"></i>
+                    <h3>
+                        última atualização
+                    </h3>
+                    <div class="top-time-data">
+                        <p>13:54:34</p>
+                        <p>06/12/2016</p>
+                    </div>
+                </div>
+                <canvas id="barChart" style="position: : relative; height: 100%; width: 100%;"></canvas>
+                <label for="main-period">
+                    <select name="Periodo" id="main-period">
+                        <option value="">Diario</option>
+                        <option value="">Semanal</option>
+                        <option value="" selected>Mensal</option>
+                        <option value="">Anual</option>
+                    </select>
+                </label>
+            </div>
+            <div class="chart-secondary">
+                <canvas id="barChart2" style="position: relative; height: 100%; width: 60%"></canvas>
+            </div>
+
+        </div>
+        <div class="main-bottom">
+            <article>
+                <div class="main-bottom-container">
+                    <h1>Custo</h1>
+                    <div class="custo-container">
+                        <div class="custo-item">
+                            <p>R$</p>
+                            <div class="valor">
+                                <h1>Media por entrega:</h1>
+                                <h3 class="mainValue">14,37</h3>
+                            </div>
+                        </div>
+                        <div class="custo-item">
+                            <p>R$</p>
+                            <div class="valor">
+                                <h1>Diario:</h1>
+                                <h3>8.340,90</h3>
+                            </div>
+                        </div>
+                        <div class="custo-item">
+                            <p>R$</p>
+                            <div class="valor">
+                                <h1>Mensal:</h1>
+                                <h3>30.982,82</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <h1>Custo</h1>
+                    <div class="rodando-container">
+                        <div class="custo-item">
+                            <div class="valor">
+                                <h1>Media por entrega:</h1>
+                                <h3 class="mainValue">34</h3>
+                            </div>
+                            <p>km</p>
+                        </div>
+                        <div class="custo-item">
+                            <div class="valor">
+                                <h1>Diario:</h1>
+                                <h3>9.962</h3>
+                            </div>
+                            <p>km</p>
+                        </div>
+                        <div class="custo-item">
+                            <div class="valor">
+                                <h1>Mensal:</hh1>
+                                <h3>139.500</h3>
+                            </div>
+                            <p>km</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <aside>
+                <div class="veiculo-painel">
+                    <h1>Veículos da frota</h1>
+                    <i class="fa-solid fa-truck"></i>
+                    <h2>Total <span>99</span></h2>
+                </div>
+                <div class="veiculo-data">
+                    <div class="veiculo-data-item emrota">
+                        <p>
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <label>Em rota</label>
+                            <span>00</span>
+                        </p>
+                    </div>
+                    <div class="veiculo-data-item emmanu">
+                        <p>
+                            <i class="fa-solid fa-wrench"></i>
+                            <label>Em manutenção</label>
+                            <span>00</span>
+                        </p>
+                    </div>
+                    <div class="veiculo-data-item indisp">
+                        <p>
+                            <i class="fa-solid fa-ban"></i>
+                            <label>Indisponivel</label>
+                            <span>00</span>
+                        </p>
+                    </div>
+                </div>
+
+            </aside>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

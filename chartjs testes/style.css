@@ -1,0 +1,17 @@
+body {
+    background: rgb(155, 155, 155);
+    padding: 15px;
+}
+
+canvas {
+    border: 3px solid rgb(80, 56, 56);
+    background: whitesmoke;
+    box-shadow: 3px 3px 10px rgb(0,0,0,0.31);
+}
+
+.bar{
+    position: relative;
+    margin: auto;
+    height: 400px;
+    width: 800px;
+}
