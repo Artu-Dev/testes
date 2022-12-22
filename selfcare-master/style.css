@@ -17,11 +17,9 @@
 
 body {
   color: var(--clr-black);
-  width: 100vw;
 }
 
 header {
-
   background: white;
   display: flex;
   justify-content: space-between;

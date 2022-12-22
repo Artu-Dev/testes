@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Praia</title>
+    <!--font awsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--css-->
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <link rel="stylesheet" href="css/mediaq.css">
+    <!--google fonts-->
+    <style> @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap'); </style>
+</head>
+<body>
+
+    <main id="main">
+        <section class="main-home">
+            <header>
+                <div class="header-logo"><h1>Cadra</h1></div>
+                <i class="fa-solid fa-bars" id="headerButton"></i>
+                <nav class="hide" id="navItems">
+                    <ul>
+                        <li><a href="#about">sobre</a></li>
+                        <hr class="hidedesk">
+                        <li><a href="#artigos">artigos</a></li>
+                        <hr class="hidedesk">
+                        <li class="subscribe"><a href="#subscribe">inscrever-se</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="main-home-title center">
+                <h1>Lava</h1>
+                <h2>Praia de areia preta</h2>
+                <div class="horizontal-bar"></div>
+            </div>
+            <section class="main-about" id="about">
+                <article>
+                    <div class="main-about-title center">
+                        <h1>Viagem lenta</h1>
+                        <h2>um blog de viagem</h2>
+                        <div class="horizontal-bar thin"></div>
+                    </div>
+                    <div class="main-about-text">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum voluptatem aliquid error tempore iusto aliquam ullam sapiente, voluptate consequuntur officiis sit odit alias nostrum. Dignissimos cumque laudantium quibusdam eos dolores!
+                        </p>
+                    </div>
+                </article>
+            </section>
+        </section>
+        <section class="main-articles" id="artigos">
+            <article>
+                <div class="main-articles-title center">
+                    <h1>Ultimos artigos</h1>
+                    <h2>Nossas mais recentes postagens</h2>
+                    <div class="horizontal-bar thin"></div>
+                </div>
+                <div class="main-articles-content">
+                    <div class="main-articles-item" id="img01">
+                        <div class="main-articles-item-title center">
+                            <h1>tunza</h1>
+                            <h2>porto robusto</h2>
+                            <div class="horizontal-bar thin"></div>
+                        </div>
+                    </div>
+                    <div class="main-articles-item" id="img02">
+                        <div class="main-articles-item-title center">
+                            <h1>timor</h1>
+                            <h2>praias intocadas</h2>
+                            <div class="horizontal-bar thin"></div>
+                        </div>
+                    </div>
+                    <div class="main-articles-item" id="img03">
+                        <div class="main-articles-item-title center">
+                            <h1>lombook</h1>
+                            <h2>lava sem fim</h2>
+                            <div class="horizontal-bar thin"></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="main-subscribe center" id="subscribe">
+            <div class="main-subscribe-title center">
+                <h1>Inscreva-se</h1>
+                <h2>Inscreva-se na nossa Newsletters</h2>
+                <div class="horizontal-bar thin"></div>
+            </div>
+            <form action="newsletter.php" method="post" autocomplete="on">
+                <input type="email" name="email" id="iemail" placeholder="Seu email" autocomplete="email">
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>
+            baseado no desing de <a href="https://www.behance.net/gallery/91811239/Lava-(Website-prototype)/modules/530713989" style="color: red">ksenia vovk</a>
+        </p>
+        <br>
+        <p>
+            Photo by <a href="https://unsplash.com/@matheo_jbt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Matheo JBT</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
+        <p>
+            Photo by <a href="https://unsplash.com/@finding_dan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Finding Dan | Dan Grinwis</a> on <a href="https://unsplash.com/s/photos/topdown-sea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
+        <p>
+            Photo by <a href="https://unsplash.com/@hansonluu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Hanson Lu</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
+        <p>
+            Photo by <a href="https://unsplash.com/@zekedrone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Martin Sanchez</a> on <a href="https://unsplash.com/s/photos/lava?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
