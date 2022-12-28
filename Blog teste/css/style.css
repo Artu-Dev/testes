@@ -79,7 +79,7 @@ header #navItems ul {
 }
 
 main section.main-home {
-    background: #242424 url('../img/background.jpg') no-repeat center -560px;
+    background: #141519 url('../img/background.jpg') no-repeat center -560px;
     background-size: cover;
     height: 195vh;
     display: flex;

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="cookies.png" type="image/x-icon">
+</head>
+<body>
+    <div class='left-menu'>
+        <p>
+            Cookies:
+            <output id='outcookie'>0</output>
+        </p>
+        <button id='btnBoost' onclick='boostCookie()' disabled>
+            Boost: <span id='boostPrice'>10</span>cks
+        </button>
+        <progress id="progressBoost" value="0" max="80"></progress>
+
+        <button id="btnAuto" onclick="autoCookies()">
+            AutoCookie: <span id='autoPrice'>100</span>cks
+        </button>
+        <progress id="progressAuto" max="9" value="0"></progress>
+    </div>
+    
+    <div class='cookie'>
+        <div onclick='increaseCookie()' id='cookieIMG'></div>
+        <p>Preço: <output id='cookiePrice'>1</output></p>
+    </div>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
