@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRELOAD</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <!--google fonts-->
+  <style> @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,600;1,700&display=swap');</style>
+  <!--font awsome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="preload">
+    <div>
+      <img src="https://thumbs.gfycat.com/CorruptOldfashionedGuineapig-max-1mb.gif" alt="">
+    </div>
+  </div>
+  <div id="contentMain" class="container hide">
+    <header class="header">
+      <h1 class="header logo">Testebook</h1>
+    </header>
+    <aside class="aside-container-left">
+      <nav class="aside-nav-container">
+        <ul>
+          <li><i class="fa-solid fa-user"></i> Meu perfil</i></li>
+          <li><i class="fa-solid fa-paper-plane"></i> Mensagens</li>
+          <li><i class="fa-solid fa-heart"></i> Curtidas</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-area">
+      <form  class="main-area-submit" action="enviarPost.php" method="post" autocomplete="off" >
+        <textarea name="inputPost" id="inputPost" required></textarea>
+        <button class="SubmitBtn">Enviar</button>
+      </form>
+      <div id="app" class="posts-container"> 
+      </div>
+    </main>
+  </div>
+  
+  <script src="script.js"></script>
+  <script>
+    document.body.onload = () => {
+      const content = document.querySelector('#contentMain')
+      const preload = document.querySelector('.preload')
+      content.classList.remove('hide');
+      preload.classList.add('hide');
+    }
+  </script>
+</body>
+</html>
