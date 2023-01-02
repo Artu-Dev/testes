@@ -16,7 +16,7 @@ const printPosts = async() => {
     postContainer.innerHTML += `
       <div class="post">
         <div class="post-title-container">
-          <img class="post-title-pfp" src="${data[i+1].thumbnailUrl}" alt="">
+          <img class="post-title-pfp" src="https://thumbs.gfycat.com/CorruptOldfashionedGuineapig-max-1mb.gif" data="${data[i+1].thumbnailUrl}" alt="">
           <p>${data[i].title}</p>
         </div>
         <div class="post-image-container">
