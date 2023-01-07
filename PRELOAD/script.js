@@ -20,7 +20,7 @@ const printPosts = async() => {
           <p>${data[i].title}</p>
         </div>
         <div class="post-image-container">
-          <img class="post-image" src="https://thumbs.gfycat.com/CorruptOldfashionedGuineapig-max-1mb.gif" data="${data[i].url}" alt="placehoder.png">
+          <img class="post-image" src="https://thumbs.gfycat.com/CorruptOldfashionedGuineapig-max-1mb.gif" data="http://lorempixel.com.br/600/600/?${i}" alt="placehoder.png">
         </div>
         <i class="fa-solid fa-heart hide"></i>
         <i class="fa-regular fa-heart"></i>
