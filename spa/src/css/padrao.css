@@ -1,0 +1,48 @@
+main div {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+main div img{
+  max-height: 350px;
+}
+
+main .main-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.main-text h3,h2 {
+  font-size: 1.4em;
+  color: #323b91;
+  margin-bottom: 0.5rem;
+}
+
+.main-text h2 {
+  font-size: 2em;
+}
+
+
+.main-text p {
+  margin: 0.5rem 0 2rem 0;
+  text-align: justify;
+  text-indent: 2rem;
+  font-size: 1.1em;
+  line-height: 1.3em;
+}
+
+.main-text span {
+  color: #e9003a;
+}
+
+main a {
+  color: #a66eff;
+}
+
+main a:hover {
+  text-decoration: underline;
+  color: rgb(128, 0, 255);
+}

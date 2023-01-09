@@ -1,0 +1,23 @@
+main > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main > div .erroDiv h2{
+  font-size: 3em;
+}
+
+main > div .erroDiv p{
+  font-size: 1.5em;
+}
+
+main > div .erroDiv a {
+  color: rgb(112, 112, 112);
+}
+
+main > div .erroDiv a:hover {
+  text-decoration: underline;
+  color: #02a06b;
+}
