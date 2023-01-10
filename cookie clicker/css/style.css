@@ -32,7 +32,7 @@ body{
 }
 
 .cookie div#cookieIMG {
-    background: url('https://assets.stickpng.com/images/580b57fbd9996e24bc43c0fc.png') no-repeat center;
+    background: url('../cookieClicker.png') no-repeat center;
     background-size: contain;
     height: 500px;
     width: 500px;

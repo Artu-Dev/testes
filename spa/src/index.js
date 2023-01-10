@@ -1,8 +1,3 @@
-import home from './pages/home/index.js'
-import about from './pages/about/index.js'
-import contacts from './pages/contacts/index.js'
-import notFound from './pages/404/index.js'
-
 const main = document.querySelector('#root');
 
 const init = () => {
@@ -17,7 +12,13 @@ function changeCSS(pagina) {
   link.rel = 'stylesheet';
   link.href = `css/${pagina}.css`;
   document.head.appendChild(link);
-  console.log(document.head)
+}
+
+function changeHTML(pagina) {
+  import(`./pages/${pagina}/index.js`)
+  .then(paginaJS => {
+    main.appendChild(paginaJS.default())
+  })
 }
 
 function mainChange() {
@@ -25,19 +26,19 @@ function mainChange() {
   document.head.lastChild.remove()
   switch(window.location.hash){
     case "":
-      changeCSS("padrao")
-      main.appendChild(home());
+      changeHTML("home");
+      changeCSS("padrao");
       break;
     case "#about":
-        changeCSS("padrao")
-        main.appendChild(about());
+        changeHTML("about");
+        changeCSS("padrao");
         break;
     case "#contacts":
-      changeCSS("contato")
-      main.appendChild(contacts());
+      changeHTML("contacts");
+      changeCSS("contato");
       break;
     default:
-      main.appendChild(notFound());
+      changeHTML("404")
       changeCSS("404")
   }
 }

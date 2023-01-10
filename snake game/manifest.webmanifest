@@ -1,0 +1,18 @@
+{
+  "short_name": "SnakeGame",
+  "name": "Jogo da Cobrinha",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#995588",
+  "theme-color": "#995588",
+  "background_color": "#000000",
+  "background-color": "#000000",
+  "description": "Jogo da cobrinha feita com Javascript puro",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

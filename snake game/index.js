@@ -5,6 +5,7 @@ window.onload = function(){
   setInterval(game, 80);
 
   const vel = 1; 
+  let direction = ''
   let velX = velY = 0;
   let posX = posY = 10;
   let sizePiece = 5;
@@ -14,7 +15,6 @@ window.onload = function(){
   let trail = [];
   tail = 5;
 
-  var skin = ['rgb(0,255,0)','rgb(0,100,100)','rgb(100,150,0)','rgb(150,100,0)','rgb(200,255,0)']
   let c = 0;
 
   function game(){
@@ -34,8 +34,8 @@ window.onload = function(){
     context.fillStyle = 'red';
     context.fillRect(appleX*sizePiece, appleY*sizePiece, sizePiece,sizePiece);
 
-    context.fillStyle = skin[c];
     for(let i = 0; i < trail.length; i++){
+      context.fillStyle = generateColor(i);
       context.fillRect(trail[i].x*sizePiece, trail[i].y*sizePiece, sizePiece,sizePiece);
       if(trail[i].x == posX && trail[i].y == posY){
         velX = velY = 0;
@@ -61,42 +61,54 @@ window.onload = function(){
   function keyPush(event){
     switch(event.keyCode || event){
       case 37: // left
-        velX = - vel;
-        velY = 0
+        leftInput()
         break;
       case 38: // up 
-        velX = 0;
-        velY = -vel;
+        upInput()
         break;
       case 39: //right
-        velX = vel;
-        velY = 0;
+        rightInput()
         break;
       case 40: // down
-        velX = 0;
-        velY = vel;
+        downInput()
         break;
     }
   }
+  
+  function generateColor(i){
+    const colors =  ["#211020","#423020","#614040","#735040","#846151"]
+    return colors[i]
+  }
+
+
+
   const up = document.getElementById("up");
   const left = document.getElementById("left");
   const right = document.getElementById("right");
   const down = document.getElementById("down");
   
-  up.onclick = () => {
+  const upInput = up.onclick = () => {
+    if(direction == "down") return
     velX = 0;
     velY = -vel;
+    direction = 'up';
   }
-  left.onclick = () => {
+  const leftInput = left.onclick = () => {
+    if(direction == "right") return
     velX = - vel;
     velY = 0
+    direction = 'left';
   }
-  right.onclick = () => {
+  const rightInput = right.onclick = () => {
+    if (direction == 'left') return
     velX = vel;
     velY = 0;
+    direction = 'right';
   }
-  down.onclick = () => {
+  const downInput = down.onclick = () => {
+    if (direction == 'up') return
     velX = 0;
     velY = vel;
+    direction = 'down';
   }
 }
