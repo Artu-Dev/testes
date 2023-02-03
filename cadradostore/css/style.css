@@ -5,8 +5,8 @@
     --clr-green02: #5F8D4E;
     --clr-green03: #285430;
     --clr-greenbg: #E5D9B6;
-    --clr-orange01: #C15062;
-    --clr-orange02: #ffff;
+    --clr-orange02: #C15062;
+    --clr-orange01: #ffff;
     --clr-orange03: #4E262D;
     --clr-brown01: #6E353E;
     --clr-white01: #fff;
@@ -168,6 +168,7 @@ header .searchbar label {
 
 .SearchItem:hover {
     background: var(--clr-orange02);
+    color: var(--clr-white01);
 }
 
 header nav {

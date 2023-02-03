@@ -1,128 +1,72 @@
-let http = new XMLHttpRequest();
-
-http.open('get', 'js/json/items.json', true);
-
-http.send();
-
-http.onload = function(){
-    if(this.readyState == 4 && this.value == 200) {
-        let coisas = JSON.parse(this.responseText);
-        
-    }
+if (localStorage == "localCart") {   
+    items = JSON.parse(localStorage.getItem('localCart'))
 }
 
-
-if (!JSON.parse(localStorage.getItem("localCart"))) {
-    alert('ndad')
-    var items = [
+let items = [
     {
         id: 0,
-        nome: 'maconha na maconha',
-        img: 'img/catnip.jpg',
+        nome: 'Movel Confortavel',
+        img: 'https://api.lorem.space/image/furniture?w=600&h=600&id=0',
         quantidade: 0,
         price: 12
     },
     {
         id: 1,
-        nome: 'manteiga',
-        img: 'img/manteiga.jpg',
+        nome: 'Provavelmente uma cadeira',
+        img: 'https://api.lorem.space/image/furniture?w=600&h=600&id=1',
         quantidade: 0,
         price: 7
     },
     {
         id: 2,
-        nome: 'cesio-137',
-        img: 'img/cesio.jpg',
+        nome: 'Movel desconfortavel',
+        img: 'https://api.lorem.space/image/furniture?w=600&h=600&id=2',
         quantidade: 0,
         price: 88
     },
     {
         id: 3,
-        nome: 'metanfetamina',
-        img: 'img/metanfetamina.jpg',
+        nome: 'Talvez um sofa',
+        img: 'https://api.lorem.space/image/furniture?w=600&h=600&id=3',
         quantidade: 0,
         price: 89
     },
     {
         id: 4,
-        nome: 'Clube do Zap',
-        img: 'img/clube do zap.png',
+        nome: 'Assento conceitual',
+        img: 'https://api.lorem.space/image/furniture?w=600&h=600&id=4',
         quantidade: 0,
         price: 24.5
     },
     {
         id: 5,
-        nome: 'Gato Homossexual',
-        img: 'img/homosexual.jpg',
+        nome: 'Chair',
+        img: 'https://api.lorem.space/image/furniture?w=600&h=600&id=5',
         quantidade: 0,
         price: 69.69
     },
     {
         id: 6,
-        nome: 'Conhecimento',
-        img: 'img/conhecumento.jpg',
+        nome: 'Definitivamente um Produto',
+        img: 'https://api.lorem.space/image/furniture?w=600&h=600&id=6',
         quantidade: 0,
         price: 42
     },
     {
         id: 7,
-        nome: 'Maçã',
-        img: 'img/maca.jpg',
+        nome: 'Lorem ipsum',
+        img: 'https://api.lorem.space/image/furniture?w=600&h=600&id=7',
         quantidade: 0,
         price: 2.25
     },
     {
         id: 8,
-        nome: 'Tyler o criador',
-        img: 'img/tyler.jpg',
+        nome: 'Coisa pra sentar',
+        img: 'https://api.lorem.space/image/furniture?w=600&h=600&id=8',
         quantidade: 0,
         price: 18
     },
-    ];
-} else {    
-    items = JSON.parse(localStorage.getItem('localCart'))
-}
-
-function tutorialso() {
-/*
-localStorage.setItem("localCart", JSON.stringify(items)); // salvar objeto, mas pra recuperar vai vir como string, e voce nao vai ter como utilizar ele
-const LocalStorageCart  = localStorage.getItem("localCart");
-const cartObject = JSON.parse(LocalStorageCart); // converte de volta para objeto
-
-console.log(cartObject);
-*/
-/*
-localStorage.setItem("localCart", items); // INSERIR DADOS
-
-const LocalStorageCart  = localStorage.getItem("localCart"); // resgatar dado
-
-console.log(LocalStorageCart);
-
-//remover item
-localStorage.removeItem("localCart")
-*/
-
-/*
-//Limpar todos os items
-
-localStorage.setItem("a", 1);
-localStorage.setItem("b", 2);
-// console.log(typeof localStorage.getItem("a")); // idenpendente do dado, ele vai cair como uma string
-
-localStorage.clear(); 
-*/
-
-/* 
-//RESGATANDO DADO QUE NAO EXISTE
-    const lastName = localStorage.getItem("lastlame");
-    console.log(lastName); //null
-
-    if (!lastName) {
-        console.log("Sem sobrenome!")
-    }
-*/
-// sessionStorage funciona igual mas quando a pagina é fechada os dados sao limpados
-}
+];
 
 let cartContent = document.querySelector('#cart');
 
