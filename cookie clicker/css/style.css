@@ -9,16 +9,67 @@ body{
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 100vh;
-    grid-template-areas: "leftmenu cookie"
+    grid-template-areas: "leftmenu cookie";
+    overflow-x: hidden;
 }
 
 .left-menu {
-    background: indigo;
+    background: #AA5656;
+    color: #F1DBBF;
     grid-area: leftmenu;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    color: aliceblue;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.store {
+    width: 100%;
+    margin-bottom: 80%;
+    padding: 1rem;
+}
+
+.cookie-counter {
+    background: #698269;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.cookie-counter output {
+    color: #05f639;
+    font-weight: bold;
+}
+
+button {
+    padding: 1rem 2rem;
+    border: none;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #292929;
+    color: #F1DBBF;
+}
+
+button:disabled {
+    background: #52525296;
+    color: #4b4b4bbd;
+}
+
+progress {
+    width: 100%;
+    height: .8rem;
+    border-radius: 0;
+    margin-bottom: 2rem;
+}
+
+progress::-webkit-progress-value {
+    background: #698269;
+    border-radius: 0 1rem 1rem 0;
+}
+
+progress::-webkit-progress-bar {
+    background: #F1DBBF;
+    border-radius: 2px;
 }
 
 .cookie{
@@ -28,7 +79,19 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+}
+
+.cookie p {
+    font-size: 1.5rem;
+    color: #292929;
+    font-weight: bold;
+    background: #F1DBBF;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+.cookie output {
+    color: #AA5656;
 }
 
 .cookie div#cookieIMG {

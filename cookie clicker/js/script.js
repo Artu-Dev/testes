@@ -32,7 +32,7 @@ boostCookie = () => {
         setTimeout(function(){
             cookieValue = Math.ceil(cookieValue/1.6);
             onBoost = false;
-            BoostCheck();
+            Check();
             printCookies()
             progressBoost.value = 0;
             clearInterval(BoostInterval)
@@ -71,14 +71,20 @@ printCookies = () => {
     });
     spanBoostPrice.innerHTML = boostPrice;
     SpancookiePrice.innerHTML = cookieValue;
-    BoostCheck();
+    Check();
 }
 
-BoostCheck = () => {
+Check = () => {
     if(cookieCounter >= boostPrice && !onBoost) {
         btnBoost.disabled = false
     } else {
         btnBoost.disabled = true;
+    }
+
+    if(cookieCounter >= 100) {
+        btnAuto.disabled = false;
+    } else {
+        btnAuto.disabled = true;
     }
 }
 
@@ -115,3 +121,5 @@ numeros = (valor) => {
 } 
 animate();
 }
+
+Check()
