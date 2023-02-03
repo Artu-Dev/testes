@@ -137,17 +137,16 @@ main .mainChart {
     width: 80%;
     height: 100%;
     position: relative;
-    background: hotpink;
+    padding: 1rem;
 }
 
 main .chart-secondary {
     margin: auto 0;
     width: 20%;
-    height: 70%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ff4b4b;
 }
 
 main .main-top i {

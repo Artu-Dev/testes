@@ -121,9 +121,16 @@ const barchart2 = new Chart(ctxbar2, {
         plugins: {
             legend: {
                 display: false,
-            }
+            },
         },
+        
         layout: {
+            padding: {
+                left: 50,
+                right: 50,
+                top: 70,
+                bottom: 60
+            }
         },
         scales: {
             x: {
