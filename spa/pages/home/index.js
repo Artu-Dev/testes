@@ -10,7 +10,7 @@ export default () => {
       Single page application (<span>SPA</span>) é um tipo de aplicação web que, como o nome sugere, carrega todo o conteúdo de uma única página. Em vez de fazer uma nova requisição ao servidor para cada ação do usuário, a <span>SPA</span> carrega os dados e os recursos de que precisa para funcionar em uma única página. Isso pode tornar a aplicação mais rápida e responsiva, pois os usuários não precisam esperar o carregamento de novas páginas toda vez que realizam uma ação. No entanto, isso também pode tornar o aplicativo mais complexo de desenvolver e manter.
       </p>
       <h3>Exemplo Pratico</h3>
-      <p>Clique em <a href="/#about">About</a> ou <a href="/#contacts">Contacts</a> na barra de navegação e veja que o Header e o Footer nao serão atalizados, note tambem que a pagina nao atualizará</p>
+      <p>Clique em <a href="https://artu-dev.github.io/testes/spa/#about">About</a> ou <a href="https://artu-dev.github.io/testes/spa/#contacts">Contacts</a> na barra de navegação e veja que o Header e o Footer nao serão atalizados, note tambem que a pagina nao atualizará</p>
     </div>
   `;
   
