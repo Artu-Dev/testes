@@ -1,7 +1,3 @@
-if (localStorage == "localCart") {   
-    items = JSON.parse(localStorage.getItem('localCart'))
-}
-
 let items = [
     {
         id: 0,
@@ -68,8 +64,19 @@ let items = [
     },
 ];
 
-let cartContent = document.querySelector('#cart');
+let cartItens = [];
 
+const loadCart = () => {
+    if(localStorage.localCart) {
+        cartItens = JSON.parse(localStorage.getItem("localCart"));
+    }
+}
+loadCart()
+
+const cartContent = document.querySelector('#cart');
+const cartWindow = document.querySelector('#cartcard-container');
+const btnMenu = document.querySelector('#menu').querySelector(".fa-solid");
+const headerItems = document.querySelector(".header-list");
 
 fotmatPrice = (item) => {
     return item.toLocaleString("pt-BR",{
@@ -79,33 +86,35 @@ fotmatPrice = (item) => {
 }
 
 atualizarCart = () => {
-    localStorage.setItem("localCart", JSON.stringify(items));
     let totalPrice = 0;
     var containerCart = document.getElementById('cart-window');
     let totalPriceSpan = document.querySelector('.total-priceSpan');
 
+    cartItens = items.filter((item) => {
+        item.quantidade > 0 
+    });
     containerCart.innerHTML = "";
-    items.map((item)=> {
-        if (item.quantidade > 0){
-            containerCart.innerHTML +=  `
-            <div class="cartItem">
-                <div class="item-name">
-                    <img src="`+item.img+`" class="cartItem-img"/>
-                    <p>`+item.nome+`</p> 
-                </div>
-                <div class="item-data">
-                    <p>quantidade: <span class=quantidade-span>`+item.quantidade+`</span></p>
-                    <span>`+fotmatPrice(item.price)+`</span>
-                </div>
+    cartItens.map((item)=> {
+        containerCart.innerHTML +=  `
+        <div class="cartItem">
+            <div class="item-name">
+                <img src="`+item.img+`" class="cartItem-img"/>
+                <p>`+item.nome+`</p> 
             </div>
-            `;
-        }
+            <div class="item-data">
+                <p>quantidade: <span class=quantidade-span>`+item.quantidade+`</span></p>
+                <span>`+fotmatPrice(item.price)+`</span>
+            </div>
+        </div>
+        `;
         totalPriceSpan.innerHTML = `
         <span>`+fotmatPrice((totalPrice += item.price*item.quantidade))+`</span>
         `;
-
-
     });
+    if(cartItens.length > 0){
+        localStorage.setItem("localCart", JSON.stringify(cartItens));
+    }
+    console.log(cartItens)
 };
 
 limparCart = () => {
@@ -123,7 +132,7 @@ iniciarloja = () => {
     items.map((item)=> {
         containerProducts.innerHTML +=  `
         <div class="product-single">
-            <img src="`+item.img+`"/>
+            <img src="`+'item.img'+`"/>
             <span>`+fotmatPrice(item.price)+`</span>
             <h2>`+item.nome+`</h2>
             <a keys="`+item.id+`" id="addCart">
@@ -155,16 +164,21 @@ for(i = 0; i < links.length; i++){ //adicionar os clinks nos links
 clearCartBtn.addEventListener('click', function(){
     limparCart();
 })
-
 cartContent.addEventListener('mouseenter', function(){
-    cartContent.querySelector('.cart-window-content').classList.remove('hide');
-    cartContent.querySelector('.fa-solid').classList.add('cartopen');
+    cartWindow.querySelector('.cart-window-content').classList.remove('hide');
+    cartContent.classList.add('cartopen');
 });
-cartContent.addEventListener('mouseleave', function(){
-    cartContent.querySelector('.cart-window-content').classList.add('hide');
-    cartContent.querySelector('.fa-solid').classList.remove('cartopen')
+cartWindow.addEventListener('mouseleave', function(){
+    cartWindow.querySelector('.cart-window-content').classList.add('hide');
+    cartContent.classList.remove('cartopen')
 });
-
+btnMenu.addEventListener('click',() => {
+    headerItems.classList.toggle('show');
+    console.log(headerItems);
+});
+btnMenu.addEventListener('mouseout',() => {
+    headerItems.classList.remove('show');
+});
 
 const  header = document.querySelector('#header');
 const headerClasslist = header.classList;
@@ -172,8 +186,9 @@ const headerClasslist = header.classList;
 window.addEventListener('scroll', () => {
     if (window.scrollY >= 300) {
         if (!headerClasslist.contains('header-hide')){
-        headerClasslist.add('header-hide');
-        listSearch.classList.add('hide');
+            headerClasslist.add('header-hide');
+            listSearch.classList.add('hide');
+            headerItems.classList.remove('show');
         }
     } else {
         if (headerClasslist.contains('header-hide')) {

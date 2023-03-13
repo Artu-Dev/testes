@@ -20,7 +20,7 @@ const printPosts = async() => {
           <p>${data[i].title}</p>
         </div>
         <div class="post-image-container">
-          <img class="post-image" src="${loading}" data="https://api.lorem.space/image/album?w=600&h=600&id=${i}" alt="placehoder.png">
+          <img class="post-image" src="${loading}" data="https://api.lorem.space/image/album?w=600&h=600&id=${i}" loading="lazy" alt="placehoder.png">
         </div>
         <i class="fa-solid fa-heart hide"></i>
         <i class="fa-regular fa-heart"></i>

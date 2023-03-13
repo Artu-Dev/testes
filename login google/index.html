@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google login</title>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Entrar com google</h1>
+    <div id="buttonDiv"></div> 
+    
+    <img alt="User pfp" id="picture" class="hide">
+    <div class="user-data hide">
+      <div>
+        <i class="fa-solid fa-signature"></i><p id="fullName">nome completo</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-bug"></i><p id="sub">sub</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-id-card"></i><p id="given_name">given_name</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-envelope"></i><p id="email">email</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-lock"></i><p id="emailVerifield">emailVerifield</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

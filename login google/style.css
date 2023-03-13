@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #001235;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  background: #17408d;
+  max-width: 80%;
+  padding: 2rem;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 4px 3px 10px rgba(0, 0, 0, 0.233);
+}
+
+main h1 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #d2dcf0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
+}
+
+#buttonDiv {
+  margin-bottom: 2rem;
+}
+
+.user-data {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+main .user-data div{
+  background: #3a7fff;
+  padding: .6rem 2rem;
+  font-size: 1.2rem;
+  border-radius: .5rem;
+  color: #eee;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: ease .3s;
+  cursor: pointer;
+}
+
+main .user-data div:hover {
+  background: #2f67cf;
+}
+
+main .user-data i {
+  background: #001235;
+  padding: .8rem .7rem;
+  border-radius: 5rem;
+  margin-right: 1rem;
+}
+
+main #picture {
+  width: 200px;
+  border-radius: 50%;
+  border: 4px solid #001235;
+}
+
+
+.fa-signature {
+  color: rebeccapurple;
+}
+
+.fa-bug {
+  color: #8f8f8f;
+}
+
+.fa-id-card {
+  color: #56a84f;
+}
+
+.fa-envelope {
+  color: #bb4c4c;
+}
+
+.fa-lock {
+  color: #906eeb;
+}
+
+
